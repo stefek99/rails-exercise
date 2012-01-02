@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     @feed_urls = feed_urls
     if (params[:lang]) then
       lang = params[:lang]
-      cookies[:lang] = {:value => lang, :expires => 1.hour.from_now }
+      cookies[:lang] = {:value => lang, :expires => 7.days.from_now }
     elsif (cookies[:lang]) then
       lang = cookies[:lang]
     end

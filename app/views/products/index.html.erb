@@ -5,7 +5,7 @@ Select your language:
     <% end %>
 <% end %>
 <br>
-Default language set to: <% if @cookie then %><%= @cookie %><% else %> none <% end %>
+Default language set to: <strong><% if @cookie then %><%= @cookie %><% else %> none <% end %></strong>
 <br>
 <%= link_to "Reset default language", :action => "reset_cookie" %>
 

@@ -18,7 +18,7 @@
 	border-radius:6px;
 	border:1px solid #74b807;
 	display:inline-block;
-	color:#ffffff;
+	color:#ffffff !important;
 	font-family:arial;
 	font-size:15px;
 	font-weight:bold;
