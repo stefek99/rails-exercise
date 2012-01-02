@@ -1,8 +1,10 @@
 RailsExercise::Application.routes.draw do
+  get "products/reset_cookie"
+
   resources :products
-	get "pages/index"
-    match '/', :to => 'products#index'
+  match '/', :to => 'products#index'
 	root :to => 'products#index'
+  #match '/products/reset_cookie', :to => 'products#reset_cookie'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

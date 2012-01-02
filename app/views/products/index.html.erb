@@ -1,12 +1,23 @@
+Select your language:
 <% @feed_urls.each do |k,v| %>
     <%= link_to(:lang => k) do %>
         <div class="greenButton"><%=k%></div>
     <% end %>
 <% end %>
+<br>
+Default language set to: <% if @cookie then %><%= @cookie %><% else %> none <% end %>
+<br>
+<%= link_to "Reset default language", :action => "reset_cookie" %>
 
 <hr>
 
- <% @feed_data.each do |element| %>
-
-
+<% if @feed_data then %>
+ <% @feed_data.each do |item| %>
+    <% item = item[0] %>
+    <%= "<a href=\"#{item[:link]}\">#{item[:title]}</A>".html_safe %>
+    <%= "<img src=\"#{item[:image]}\"/>".html_safe %>
+    <hr>
+ <% end %>
+   <% else %>
+    <h3>No default language set. Please pick your language above.</h3>
  <% end %>
