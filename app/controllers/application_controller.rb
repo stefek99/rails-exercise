@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def max_items
+    return 5
+  end
+
   def feed_urls
   {"english" => "http://www.arenaflowers.com/files/sitemaps/arenaflowers.com/google_base_feed.xml",
   "french" => "http://www.arenafleurs.fr/files/sitemaps/arenafleurs.fr/google_base_feed.xml",
