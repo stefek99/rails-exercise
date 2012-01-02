@@ -3,8 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 RailsExercise::Application.initialize!
-Rails.logger = Logger.new(STDOUT)
-Rails.logger = Log4r::Logger.new("Application Log")
+
 
   def feed_url
       {:english => "http://www.arenaflowers.com/files/sitemaps/arenaflowers.com/google_base_feed.xml",

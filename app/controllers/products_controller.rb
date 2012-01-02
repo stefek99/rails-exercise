@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   end
 
-    def get_feed(url)
+  def get_feed(url)
 
 
   end
